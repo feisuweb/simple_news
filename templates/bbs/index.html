@@ -1,0 +1,15 @@
+{% extends "bbs/base.html" %}
+
+{% block body %}
+<div style="text-align:center;">
+  <h1>→这是首页←</h1>
+  {% if name %}
+      {{ name }}
+      <a href="/bbs/logout/">注销</a>
+  {% else %}
+    <a href="/bbs/regist/" class="btn btn-info btn-lg" rel="button">注册</a>
+    <b>←无形装逼,最为致命→</b>
+    <a href="/bbs/login/" class="btn btn-success btn-lg" rel="button">登录</a><br/>
+  {% endif %}
+</div>
+{% endblock %}

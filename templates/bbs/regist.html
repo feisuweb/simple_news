@@ -1,0 +1,14 @@
+{% extends "bbs/base.html" %}
+
+{% block h1 %}
+<div style="text-align:center;top:50%;left:50%;margin:160px 0 0 550px;width:500px;height:330px;">
+    <h1>注册中心</h1>
+    <form action="/bbs/regist/" method="post" class="bs-example bs-example-form">
+        {% for item in form %}
+          <p>{{ item }}<span>{{ item.errors.as_text }}</span></p>
+        {% endfor %}
+        <input type="submit" class="btn btn-success btn-lg" value="注册"><br />
+        <span style="color:yellow;font-size:15px;">{{ error_msgs }}</span>
+    </form>
+</div>
+{% endblock h1 %}

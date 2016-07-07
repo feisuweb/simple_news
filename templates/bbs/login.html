@@ -1,0 +1,15 @@
+{% extends "bbs/base.html" %}
+
+{% block body %}
+<div style="text-align:center;top:50%;left:50%;margin:160px 10px 20px 550px;width:500px;height:230px;">
+  <h2><strong style="float:left;">用户登录</strong></h2><br/><br/>
+  <form class="bs-example bs-example-form" action="/bbs/login/" method="post">
+    {% for item in form %}
+      <p>{{ item }}</p>
+    {% endfor %}
+    <br/>
+    <input type="submit" style="float:left;" class="btn btn-success btn-lg" value="注册">
+    <span style="color:yellow;font-size:15px;">{{ error_msgs }}</span>
+  </form>
+</div>
+{% endblock %}
